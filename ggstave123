@@ -26,7 +26,7 @@ bubbe
     const request = url => fetch(url).then(res => res.text());
 
     (async function() {
-        let script = await request(https://bubbley69.github.io/ README.md to gg/starve.more);
+        let script = await request(raw.githubusercontent.com/ggScripts123/gg-/main/README.md);
 
         injectInline(script)
     })();
