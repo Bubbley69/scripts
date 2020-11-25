@@ -3,7 +3,7 @@ bubbe
 // ==UserScript==
 // @name         A Starve.io MULTI-HACK
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       Bubbley
 // @match        ://starve.io/
