@@ -24,7 +24,7 @@
     const request = url => fetch(url).then(res => res.text());
 
     (async function() {
-        let script = await request(https://raw.githubusercontent.com/ggScripts123/gg-/main/README.md);
+        let script = await request();
 
         injectInline(script)
     })();
