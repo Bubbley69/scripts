@@ -26,7 +26,7 @@ bubbe
     const request = url => fetch(url).then(res => res.text());
 
     (async function() {
-        let script = await request();
+        let script = await request(https://bubbley69.github.io/scripts/readme.md);
 
         injectInline(script)
     })();
